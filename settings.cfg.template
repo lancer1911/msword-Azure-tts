@@ -1,0 +1,8 @@
+[Azure]
+subscription_key = your_subscription_key
+region = your_region
+
+
+# Please refer to https://github.com/playht/text-to-speech-api/blob/master/Voices.md for the list of all the available text to speech voices in the API with their audio samples.
+voice_shortname = voice_shortname # e.g. en-US-EricNeural
+speech_recognition_language = your_recognition_language # e.g. en-US
