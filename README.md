@@ -55,4 +55,3 @@ python msword-Azure-tts.py
 A file dialog will appear, allowing you to select the Word document to convert.
 
 The script will save the generated MP3 audio file in the same directory as the input file with the same name and an `-Azure-tts.mp3` suffix. For example, if the input file is named `sample.docx`, the output file will be named `sample-Azure-tts.mp3`.
-```
