@@ -1,3 +1,9 @@
+"""
+Convert MS Word documents into mp3 by Azure API.
+written by lancer1911
+May 1, 2023
+"""
+
 import sys
 import os
 import docx
