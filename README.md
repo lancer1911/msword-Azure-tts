@@ -2,7 +2,7 @@
 
 [中文版本](./README-zh.md)
 
-This Python script converts a Microsoft Word document (`.docx`) into an MP3 audio file using Azure Cognitive Services Text-to-Speech API.
+This Python script converts a Microsoft Word document (`.docx`) into an MP3 audio file using Azure Cognitive Services Text-to-Speech API. It now supports conversion of long documents, overcoming the 10-minute limit of Azure TTS API by splitting the text and combining the resulting audio files.
 
 ## Prerequisites
 
@@ -10,17 +10,42 @@ This Python script converts a Microsoft Word document (`.docx`) into an MP3 audi
 2. An Azure subscription key for the Text-to-Speech service. Follow the instructions at [BobTranslate](https://bobtranslate.com/service/translate/microsoft.html#_2-%E6%B3%A8%E5%86%8C-azure) to obtain an API key.
 3. The region for the Azure Text-to-Speech service.
 4. A voice shortname for the Text-to-Speech service. A list of available voices can be found at [Voices.md](https://github.com/playht/text-to-speech-api/blob/master/Voices.md).
+5. `ffmpeg` software package. This is required for splitting long documents into smaller chunks and combining the resulting audio files.
 
 ## Installation
 
 1. Clone the repository or download the source code.
+   You can clone the repository by using the command:
+
+   ```
+   git clone https://github.com/lancer1911/msword-Azure-tts.git
+   ```
+
+   If you don't have Git installed, you can download the source code directly. Go to the repository's main page on GitHub, click on the "Code" button, and then click "Download ZIP". Once the ZIP file is downloaded, extract it to access the source code.
+
 2. Install the required dependencies:
 
    ```
    pip install -r requirements.txt
    ```
 
-3. Open the `settings.cfg` file and add your Azure subscription key, region, voice shortname, and speech recognition language:
+3. Install `ffmpeg`:
+
+   **macOS:**
+   ```
+   brew install ffmpeg
+   ```
+
+   **Linux (Ubuntu/Debian):**
+   ```
+   sudo apt-get update
+   sudo apt-get install ffmpeg
+   ```
+
+   **Windows:**
+   Download a static build from the [official site](https://ffmpeg.org/download.html#build-windows). Unzip the downloaded file and add the `bin` directory from the unzipped file to your system PATH.
+
+4. Open the `settings.cfg` file and add your Azure subscription key, region, voice shortname, and speech recognition language:
 
    ```
    [Azure]
