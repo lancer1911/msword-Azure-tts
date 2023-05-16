@@ -2,4 +2,4 @@ python-docx
 azure-cognitiveservices-speech
 requests
 tk
-pydub
+tqdm

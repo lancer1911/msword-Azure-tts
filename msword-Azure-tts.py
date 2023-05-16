@@ -12,6 +12,7 @@ import azure.cognitiveservices.speech as speechsdk
 from tkinter import filedialog
 from tkinter import Tk
 from pydub import AudioSegment
+from tqdm import tqdm
 
 
 def docx_to_text(file_path):
@@ -69,7 +70,9 @@ texts = [text[i:i + split_length] for i in range(0, len(text), split_length)]
 # Convert each piece of text to speech and save as separate MP3 files
 input_filename_without_ext, _ = os.path.splitext(os.path.basename(file_path))
 output_filenames = []
-for i, text in enumerate(texts):
+
+# Wrap your texts list with tqdm for a progress bar
+for i, text in enumerate(tqdm(texts, desc="Converting text to speech")):
     output_filename = f"{input_filename_without_ext}-Azure-tts-part{i}.mp3"
     text_to_speech(text, output_filename, subscription_key, region, voice_shortname, speech_recognition_language)
     output_filenames.append(output_filename)
