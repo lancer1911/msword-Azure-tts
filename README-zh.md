@@ -9,7 +9,7 @@
 1. Python 3.6或更高版本
 2. Azure文字转语音服务的订阅密钥。你可以按照 [BobTranslate](https://bobtranslate.com/service/translate/microsoft.html#_2-%E6%B3%A8%E5%86%8C-azure) 的说明获取API密钥。
 3. Azure文字转语音服务的地区。
-4. 文字转语音服务的声音短名。可用的声音列表可以在 [Voices.md](https://github.com/playht/text-to-speech-api/blob/master/Voices.md) 找到。
+4. 文字转语音服务的声音短名。可用的声音列表可以在 [Language and voice support for the Speech service](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support?tabs=tts#prebuilt-neural-voices) 找到。
 5. `ffmpeg` 软件包。用于将长文档分割为小块并组合生成的音频文件。
 
 ## 安装
