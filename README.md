@@ -9,7 +9,7 @@ This Python script converts a Microsoft Word document (`.docx`) into an MP3 audi
 1. Python 3.6 or higher
 2. An Azure subscription key for the Text-to-Speech service. Follow the instructions at [BobTranslate](https://bobtranslate.com/service/translate/microsoft.html#_2-%E6%B3%A8%E5%86%8C-azure) to obtain an API key.
 3. The region for the Azure Text-to-Speech service.
-4. A voice shortname for the Text-to-Speech service. A list of available voices can be found at [Voices.md](https://github.com/playht/text-to-speech-api/blob/master/Voices.md).
+4. A voice shortname for the Text-to-Speech service. A list of available voices can be found at [Language and voice support for the Speech service](https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/language-support?tabs=tts#prebuilt-neural-voices).
 5. `ffmpeg` software package. This is required for splitting long documents into smaller chunks and combining the resulting audio files.
 
 ## Installation
